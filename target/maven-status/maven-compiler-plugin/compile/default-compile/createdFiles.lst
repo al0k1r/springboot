@@ -1,5 +1,5 @@
-com\example\springboot\DataController.class
-com\example\springboot\model\Data.class
-com\example\springboot\repository\IDataRepository.class
-com\example\springboot\SpringbootApplication.class
-com\example\springboot\repository\DataRepository.class
+com/example/springboot/SpringbootApplication.class
+com/example/springboot/repository/IDataRepository.class
+com/example/springboot/DataController.class
+com/example/springboot/model/Data.class
+com/example/springboot/repository/DataRepository.class

@@ -37,7 +37,7 @@ public class DataRepository implements IDataRepository{
     public List<Data> getall (){
         List<Data> resultl = new ArrayList<>();
         try {
-            String query = "SELECT u.id,u.first_name,u.last_name,u.email, p.privilagename,p.discount" +
+            String query = "SELECT * " +
                     " from users as u join privilages as p on u.privilageid = p.id";
             var result = statement.executeQuery(query);
 
@@ -48,6 +48,7 @@ public class DataRepository implements IDataRepository{
                 dataObj.first_name = result.getString("first_name");
                 dataObj.last_name = result.getString("last_name");
                 dataObj.email = result.getString("email");
+                dataObj.privilageid = result.getString("privilageid");
                 dataObj.privilagename = result.getString("privilagename");
                 dataObj.discount = Integer.parseInt(result.getString("discount"));
 
