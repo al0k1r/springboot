@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 version: '3.7'
 
 networks:
@@ -7,6 +8,9 @@ networks:
       driver: default
       config:
         - subnet: 192.168.0.0/24
+=======
+version: '3.5'
+>>>>>>> Stashed changes
 
 services:
   postgres:
@@ -20,9 +24,12 @@ services:
     volumes:
       - .:/docker-entrypoint-initdb.d
     restart: unless-stopped
+<<<<<<< Updated upstream
     networks:
       mynet:
         ipv4_address: 192.168.0.2
+=======
+>>>>>>> Stashed changes
 
 
   pgadmin:
@@ -34,9 +41,12 @@ services:
     ports:
       - "5050:80"
     restart: unless-stopped
+<<<<<<< Updated upstream
     networks:
       mynet:
         ipv4_address: 192.168.0.4
+=======
+>>>>>>> Stashed changes
 
   api_service:
     container_name: sprinboot_container
@@ -46,6 +56,9 @@ services:
       - "8080:8080"
     depends_on:
       - postgres
+<<<<<<< Updated upstream
     networks:
       mynet:
         ipv4_address: 192.168.0.6
+=======
+>>>>>>> Stashed changes
