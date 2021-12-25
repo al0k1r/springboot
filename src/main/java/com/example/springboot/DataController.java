@@ -2,10 +2,7 @@ package com.example.springboot;
 
 import com.example.springboot.model.Data;
 import com.example.springboot.repository.IDataRepository;
-<<<<<<< Updated upstream
 import io.swagger.v3.oas.annotations.Operation;
-=======
->>>>>>> Stashed changes
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,20 +16,14 @@ public class DataController {
     public DataController(IDataRepository iDataRepository) {this.iDataRepository = iDataRepository;}
 
     @GetMapping(value =  "/all")
-<<<<<<< Updated upstream
     @Operation(summary = "Получить список пользователей")
-=======
->>>>>>> Stashed changes
     public List<Data> GetAll()
             throws Exception {
         return iDataRepository.getall();
     }
 
     @GetMapping(value = "/{id}")
-<<<<<<< Updated upstream
     @Operation(summary = "Получить одного пользователя")
-=======
->>>>>>> Stashed changes
     public Data Get(
             @Parameter(description = "Ид пользователя") @PathVariable int id
     ) throws Exception {
@@ -40,10 +31,7 @@ public class DataController {
     }
 
     @PostMapping
-<<<<<<< Updated upstream
     @Operation(summary = "Создание пользователя")
-=======
->>>>>>> Stashed changes
     public String Create(
             @Parameter(description = "Данные в формате json") @RequestBody Data data
     ){
@@ -51,10 +39,7 @@ public class DataController {
     }
 
     @PutMapping
-<<<<<<< Updated upstream
     @Operation(summary = "Обновление информации пользователя")
-=======
->>>>>>> Stashed changes
     public Data Update(
             @Parameter(description = "Данные в формате json") @RequestBody Data data
     ) throws Exception {
@@ -62,10 +47,7 @@ public class DataController {
     }
 
     @DeleteMapping("/{id}")
-<<<<<<< Updated upstream
     @Operation(summary = "Удаление ользователя")
-=======
->>>>>>> Stashed changes
     public int Delete(
             @Parameter(description = "Ид пользователя") @PathVariable int id
     ) throws Exception {

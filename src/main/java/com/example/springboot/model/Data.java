@@ -4,11 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description = "Сущность пользователя")
 public class Data {
-<<<<<<< Updated upstream
     @Schema(description = "Идентификатор", example = "Можно оставить пустым")
-=======
-    @Schema(description = "Идентификатор", example = "Можно оставить пустым",accessMode = Schema.AccessMode.READ_ONLY)
->>>>>>> Stashed changes
     public int id;
     @Schema(description = "Имя", example = "Кирилл")
     public String first_name;
